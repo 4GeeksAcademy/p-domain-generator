@@ -6,6 +6,20 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
+  let pronoun = ["the", "our", "your"];
+  let adj = ["great", "big", "old"];
+  let noun = ["jogger", "racoon", "pal"];
+  let extension = [".com", ".net", ".us", ".io"];
+
+  for (let pronoun of pronoun) {
+    for (let adj of adj) {
+      for (let noun of noun) {
+        for (let extension of extension) {
+          document.querySelector(
+            "#domains"
+          ).innerHTML += `<li class="py-1">${pronoun}${adj}${noun}${extension}</li>`;
+        }
+      }
+    }
+  }
 };
